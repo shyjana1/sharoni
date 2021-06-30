@@ -1,4 +1,7 @@
 .map mapboxgl-map{
     margin-top: 20px;
-    margin-bottom: -400px
+    margin-bottom: -400px;
+}
+.mapboxgl-control-container{
+    display: none !important;
 }

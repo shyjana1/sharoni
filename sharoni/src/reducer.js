@@ -11,9 +11,12 @@ export const initialState = {
 
 // selector
 export const getBasketTotal = (basket) =>
-    basket?.reduce((amount, item) => item.price + amount, 0);
+    {
+        console.log("my new basket is ", basket);
+        return basket.reduce((amount, item) => Number(item.price) + amount, 0)
+    };
 
-const reducer = (state, action) => {
+    const reducer = (state, action) => {
     console.log(action );
     switch (action.type) {
         case 'ADD_TO_BASKET':

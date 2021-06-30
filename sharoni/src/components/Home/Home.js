@@ -19,12 +19,12 @@ function Home() {
     const [{filteredValue,}, dispatch] = useStateValue();
     const [products] = useState([
 
-        { id: 1, title: "Home Bread",price:"3.99", image: Product1,description:"Devine bread" },
+        { id: 1, title: "Home Bread",price:"3.99", image: Product1,description:"Devine bread, whole wheet from sharoni to you" },
         { id: 2, title: "Bread Souper-Bowl",price:"1.99", image: BreadBg,description:"Greatest soup poured in bread" },
-        { id: 3, title: "Spread",price:"1.99", image: Spreads, description:"Vegan Gluten free garlic and herb (walnut based) nut 'cheese' spread" },
+        { id: 3, title: "Spread",price:"1.99", image: Spreads, description:"Vegan Gluten free garlic and nut 'cheese' spread" },
         { id: 4, title: "Tahini Cookies",price:"11.99", image: Cookies, description:" Tahini Cookies Wonder" },
         { id: 5, title: "Bread Basket",price:"14.99", image: Bread2, description:"Bread Galore" },
-        { id: 6, title: "Sharoni's Special: Bread & Garlic with herb nut 'cheese' spread",price:"31.99", image: Basket ,description:"Delicious Gluten free Bread with nut cheese spread." },
+        { id: 6, title: "Sharoni's Special",price:"31.99", image: Basket ,description:"Delicious Gluten free Bread with nut cheese spread." },
         
     ])
     return (

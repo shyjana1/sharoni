@@ -1,30 +1,38 @@
-import React, { useState } from "react";
-import ReactMapboxGl from "react-mapbox-gl";
-const Map = ReactMapboxGl({
-  accessToken:
-    "pk.eyJ1Ijoic2ltb24yOTExIiwiYSI6ImNrOWJsMGo4MjA1a28zZmwzeXczb2l4Y2UifQ.nivZe1N9MDMMvy7RN4xy2A"
-});
-  class SimpleMap extends React.Component {
-    state = {
-    latitude: -122.48686284636277,
-    longitude: 37.61382862248211,
-    zoom: [13]
-    };
-  render() {
-    const { latitude, longitude, zoom } = this.state;
-    return (
-      <Map className="map"
-            style="mapbox://styles/shyjana/ckqgeg05a0kaw17qgypokqasc"
-            zoom={zoom}
-            center={[latitude, longitude]}
-            containerStyle={{
-              height: "40vh",
-              width: "100vw"
-            }}
-          >
-          </Map>
-        );
-    }
-}
+import React, { Component } from 'react';
+import GoogleMapReact from 'google-map-react';
 
+
+
+const AnyReactComponent = ({ text }) => <div>{text}</div>;
+ 
+class SimpleMap extends Component {
+  static defaultProps = {
+    center: {
+      lat: 37.773972,
+      lng: -122.431297
+    },
+    zoom: 11
+  };
+ 
+  render() {
+    return (
+      // Important! Always set the container height explicitly
+      <div style={{ height: '60vh', width: '100%' }}>
+        <GoogleMapReact
+          // bootstrapURLKeys={{ key: /* YOUR KEY HERE */ }}
+          defaultCenter={this.props.center}
+          defaultZoom={this.props.zoom}
+        >
+          <AnyReactComponent
+            lat={37.6138}
+            lng={122.4869}
+            text="My Marker"
+          />
+
+        </GoogleMapReact>
+      </div>
+    );
+  }
+}
+ 
 export default SimpleMap;

@@ -1,3 +1,4 @@
+
 import React from 'react'
 import './Product.css'
 import { useStateValue } from '../../StateProvider'
@@ -26,9 +27,11 @@ const [{basket, sum}, dispatch]=useStateValue()
                 </p>
                 <p className="desc">{description}</p>
             </div>
-                <img src={image} />
+                <div className='product_image' style={{backgroundImage:`url(${image})`}}>
+                </div>
                 <button onClick={addToBasket}>Add to Basket</button>
         </div>
     )
 }
 export default Product
+
